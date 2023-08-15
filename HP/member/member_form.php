@@ -72,14 +72,6 @@
 
         }
 
-        //아이디 중복 확인 버튼 클릭
-        function checkId(){
-            // 사용자가 입력한 id값 얻어오기
-            var userid= document.member_form.id.value;
- 
-            // DB에서 같은 아이디가 있는지 확인하고 결과를 보여주는 새로운 윈도우 띄우기
-            open("./check_id.php?id="+userid, "아이디체크", "width=300, height=100, left=200, top=100");
-        }
  
     </script>
 
