@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect('20.196.204.220', 'root','mysql','webDB', '8010');
+    $conn = mysqli_connect('20.196.204.220', 'root','mysql','webDB', '8010', true);
     if(!$connect){
 
         echo "Error: Unable to connect to MySQL." . PHP_EOL;
