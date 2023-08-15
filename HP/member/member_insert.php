@@ -2,9 +2,6 @@
     $id = $_POST['id'];
     $pass = $_POST['pass'];
 
-
-    $email = $email1 . "@" . $email2;
-
     $rehist_day = date("Y-m-d H:i");
 
     include "../lib/dbconn.php";
