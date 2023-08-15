@@ -109,16 +109,6 @@
                         <div class="col1">비밀번호 확인</div>
                         <div class="col2"><input type="password" name="pass_confirm"></div>
                     </div>
-                    <div class="form">
-                        <div class="col1">이름</div>
-                        <div class="col2"><input type="text" name="name"></div>
-                    </div>
-                    <div class="form email">
-                        <div class="col1">이메일</div>
-                        <div class="col2">
-                            <input type="text" name="email">@<input type="text" name="email2">
-                        </div>
-                    </div>
                     <!-- input요소의 submit, reset으로 만들면 이미지로 못 만듬 -->
                     <!-- input요소의 타입 중 image 타입으로 하면 이미지 버튼이면서 submit 기능 -->
                     <!-- 값을 전송할 때 값이 비어있는지 검증하는 작업도 하고 싶어서.. -->
