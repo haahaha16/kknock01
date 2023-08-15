@@ -89,7 +89,7 @@
         <div id="main_content">
             <div id="join_box">
                 <!-- DB의 member테이블에 저장하는 member_insert.php에 입력값들 전달하도록 -->
-                <form action="./member/member_insert.php" method="post" name="member_form">
+                <form action="./member_insert.php" method="post" name="member_form">
                     <h2>회원 가입</h2>
  
                     <!-- 각 줄마다 라벨, 인풋요소 영역으로 나누어 지므로 col1, col2 클래스지정으로 스타일링 -->
