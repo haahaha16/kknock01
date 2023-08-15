@@ -39,12 +39,7 @@
                 document.member_form.pass_confirm.focus();
                 return;
             }
-             // 이름 비어 있는가?
-             if(!document.member_form.name.value){
-                alert("이름을 입력하세요.");
-                document.member_form.name.focus();
-                return;
-            }
+
             // 비밀번호와 비밀번호 확인 칸의 입력값이 같은지 비교
             if(document.member_form.pass.value != document.member_form.pass_confirm.value){
                 alert("비밀번호가 일치하지 않습니다.\n다시 입력해 주세요.");
@@ -63,9 +58,6 @@
             document.member_form.id.value="";
             document.member_form.pass.value="";
             document.member_form.pass_confirm.value="";
-            document.member_form.name.value="";
-            document.member_form.email1.value="";
-            document.member_form.email2.value="";
  
             // 첫번째 입력 요소로 이동
             document.member_form.id.focus();
