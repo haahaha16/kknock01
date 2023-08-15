@@ -89,9 +89,6 @@
                         <div class="col1">아이디</div>
                         <div class="col2"><input type="text" name="id"></div>
                         <!-- id줄만 존재하는 칸 -->
-                        <div class="col3">
-                            <a href="#">아이디 중복 확인</a>
-                        </div>
                     </div>
                     <div class="form">
                         <div class="col1">비밀번호</div>
