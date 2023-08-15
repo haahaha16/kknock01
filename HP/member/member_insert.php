@@ -1,9 +1,7 @@
 <?php
     $id = $_POST['id'];
     $pass = $_POST['pass'];
-    $name = $_POST['name'];
-    $email1 = $_POST['email1'];
-    $email2 = $_POST['email2'];
+
 
     $email = $email1 . "@" . $email2;
 
@@ -34,7 +32,7 @@
     //회원정보 insert
  
     //insert 쿼리문
-    $sql= "INSERT INTO member(id, pass, name, email, regist_day, level, point) VALUES('$id','$pass','$name','$email','$regist_day','9','0')";
+    $sql= "INSERT INTO member(id, pass, regist_day, level, point) VALUES('$id','$pass','$regist_day','9','0')";
  
     // 쿼리문 실행
     mysqli_query($conn,$sql);
