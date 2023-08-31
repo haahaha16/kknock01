@@ -13,11 +13,12 @@
 </head>
 <body>
 	<?php
+	$board_id = $_GET['board_id'];
 		$bno = $_GET['idx']; 
 		$hit = mysqli_fetch_array(mq("select * from board where idx ='".$bno."'"));
 		$hit = $hit['hit'] + 1;
-		$fet = mq("update board set hit = '".$hit."' where idx = '".$bno."'");
-		$sql = mq("select * from board where idx='".$bno."'"); 
+		$fet = mq("update ".$board_id." set hit = '".$hit."' where idx = '".$bno."'");
+		$sql = mq("select * from ".$board_id." where idx='".$bno."'"); /* 받아온 idx값을 선택 */
 		$board = $sql->fetch_array();
 	?>
 <!-- 글 불러오기 -->
@@ -46,26 +47,22 @@
 <div class="reply_view">
 	<h3>댓글목록</h3>
 		<?php
-			$sql3 = mq("select * from reply where con_num='".$bno."' order by idx desc");
+			$sql3 = mq("select * from reply where con_num='".$board_id."_reply where con_num='".$bno."' order by idx desc");
 			while($reply = $sql3->fetch_array()){ 
 		?>
 		<div class="dap_lo">
 			<div><b><?php echo $reply['name'];?></b></div>
 			<div class="dap_to comt_edit"><?php echo nl2br("$reply[content]"); ?></div>
 			<div class="rep_me dap_to"><?php echo $reply['date']; ?></div>
-			<div class="rep_me rep_menu">
-				<a class="dat_edit_bt" href="reply_modify.php?board_id=<?echo $board_id;?>&idx=<?php echo $bno; ?>" method="get">>수정</a>
-				<a class="dat_delete_bt" href="reply_delete.php?idx=<?php echo $reply['idx'].$reply['con_num']; ?>">삭제</a>
-			</div>
+
 			
 		</div>
 	<?php } ?>
 
 	<!--- 댓글 입력 폼 -->
 	<div class="dap_ins">
-		<form action="reply_ok.php?idx=<?php echo $bno; ?>" method="post">
+		<form action="reply_ok.php?idx=<?php echo $board_id;?>&idx=<?php echo $bno; ?>" method="post">
 			<input type="text" name="dat_user" id="dat_user" class="dat_user" size="15" placeholder="아이디">
-			<input type="password" name="dat_pw" id="dat_pw" class="dat_pw" size="15" placeholder="비밀번호">
 			<div style="margin-top:10px; ">
 				<textarea name="content" class="reply_content" id="re_content" ></textarea>
 				<button id="rep_bt" class="re_bt">댓글</button>
