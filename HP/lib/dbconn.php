@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect("localhost", "web", "mysql","webDB");
+    $conn = mysqli_connect("127.0.0.1", "web", "mysql","webDB");
     if(!$conn){
 
         echo "Error: Unable to connect to MySQL." . PHP_EOL;
